@@ -1,0 +1,37 @@
+{
+  "manifest_version": 2,
+
+  "name": "Jira Print Stickies",
+  "description": "Extends Jira, adding print stickies export options to relevent pages",
+  "version": "0.2.4",
+  "icons": {
+    "16": "eng_tech_logo_16.png",
+    "48": "eng_tech_logo_48.png",
+    "128": "eng_tech_logo_128.png"
+  },
+  "background": {
+    "persistent": false,
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://eshipping.jira.com/*"],
+      "js": ["addStickiesOptions.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "notifications",
+    "https://avatars0.githubusercontent.com/*",
+    "https://eshipping.jira.com/"
+  ],
+  "browser_action": {
+    "default_icon": {
+      "16": "eng_tech_logo_16.png"
+    },
+    "default_title": "Print Stickies",
+    "default_popup": "popup.html"
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}

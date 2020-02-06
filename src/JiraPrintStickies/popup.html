@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <script src="popup.js"></script>
+        <style>
+            body {
+                font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,'Fira Sans','Droid Sans','Helvetica Neue',sans-serif;
+                font-size: 14px;
+                font-weight: 400;
+                font-style: normal;
+                color: #172b4d;
+                margin: 10px 5px;
+                padding: 0;
+                width: 300px;
+            }
+            #list {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+            #list a {
+                margin: 5px;
+                padding: 5px;
+                background: #f4f5f7;
+                border-radius: 3px;
+                text-decoration: none;
+                display: block;
+            }
+            form {
+                margin: 10px 0;
+            }
+            label {
+                padding: 10px 5px 10px 10px;
+            }
+            input {
+                padding: 5px;
+                border-radius: 3px;
+                border: 1px solid #c2c2c2;
+                width: 176px;
+            }
+            button {
+                border: 1px solid #cfcfcf;
+                padding: 5px;
+                border-radius: 3px;
+                width: 65px;
+                background-color: #f4f5f7;
+            }
+        </style>
+    </head>
+    <body>
+        <ul id="list"></ul>
+        <form id="form">
+            <label for="issueid">Issue</label>
+            <input type="text" name="issueid" />
+            <button type="submit" id="print">Print</button>
+        </form>
+    </body>
+</html>
